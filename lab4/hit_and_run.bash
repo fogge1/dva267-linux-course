@@ -1,25 +1,29 @@
 #!/bin/bash
 
+doas pacman -Syu > /dev/null
 
-
-if #$1
-then
-  echo "Installning $1"
-#uppdatera installerade paket
-#installera $1
+if pacman -Qs $1 > /dev/null ; then
+  echo $1 is installed
+else
+  echo $1 is not installed
+  echo Installing $1
+  doas pacman -S --noconfirm $1 > /dev/null
 fi
-echo "$1 installed"
-echo "Running $2 processes of $1 for $3 seconds in xterm"
-for #(( $2 antal processer ))
+
+for (( i=0; i <$2; i++ ))
 do
-  #Kör programmet i ett xterm -fönster som bakgrundsprocess
+  xterm -e $1& 
 done
+
 sleep $3
-#döda alla xterm -processer
-echo -n "Uninstall $1? (y/n)"
+
+killall xterm
+
+echo -n "Uninstall $1? (y/N)"
 read val
+
 if [[ "$val" == "y" ]]
 then
-  echo "Uninstallning $1"
-#avinstallera $1
+  echo Uninstalling $1
+  doas pacman -R -s --noconfirm $1 > /dev/null
 fi
