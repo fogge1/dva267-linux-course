@@ -2,7 +2,7 @@
 
 Solutions to laborations for the linux course at MDU
 
-## Purposes of the laborations
+## "Instructions" of each laboration
 
 ### LAB1
 
@@ -19,3 +19,8 @@ Create a bash script that prints info about the system
 ### LAB4
 
 Create a bashs script that takes in a package name, count of processes that should run and time the processes should run for as arguments. Install the package, run x amount of background processes of the program, kill the processes after y amount of time and lastly uninstall the package.
+
+## Notes
+
+``ln --symbolic /var/log/syslog /home/isakf/link``
+``ln /var/log.txt /etc/my_log.txt``
