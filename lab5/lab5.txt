@@ -1,0 +1,9 @@
+1. alternativ 3
+2. alternativ 4
+3. alternativ 2
+4. Alternativ 1
+5. Alternativ 3
+
+sudo systemctl status sshd
+sudo systemctl stop sshd
+sudo systemctl start sshd
