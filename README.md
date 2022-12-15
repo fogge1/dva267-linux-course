@@ -22,5 +22,8 @@ Create a bashs script that takes in a package name, count of processes that shou
 
 ## Notes
 
-``ln --symbolic /var/log/syslog /home/isakf/link``
-``ln /var/log.txt /etc/my_log.txt``
+
+```apropos -s 1 [keyword]```
+
+```ln --symbolic /var/log/syslog /home/isakf/link```
+```ln /var/log.txt /etc/my_log.txt```
